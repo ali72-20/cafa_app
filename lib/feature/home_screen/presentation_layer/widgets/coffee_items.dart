@@ -1,8 +1,8 @@
 import 'package:cafa_app/core/Style.dart';
 import 'package:cafa_app/core/colors.dart';
+import 'package:cafa_app/feature/single_item/presentation_layer/single_item_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 
 class CoffeeItems extends StatelessWidget {
   CoffeeItems({super.key});
@@ -38,7 +38,16 @@ class CoffeeItems extends StatelessWidget {
             child: Column(
               children: [
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => SingleItemScreen(
+                          img: i + 1,
+                          itemName: img[i],
+                        ),
+                      ),
+                    );
+                  },
                   child: Container(
                     margin: const EdgeInsets.all(8),
                     child: Image.asset(
@@ -49,36 +58,49 @@ class CoffeeItems extends StatelessWidget {
                     ),
                   ),
                 ),
-                 Padding(
+                Padding(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(img[i], style: Style.style18.copyWith(fontWeight: FontWeight.bold, color: Colors.white),),
-                        const SizedBox(height: 8,),
-                        const Text("Best Coffee", style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.white60
-                        ),)
+                        Text(
+                          img[i],
+                          style: Style.style18.copyWith(
+                              fontWeight: FontWeight.bold, color: Colors.white),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        const Text(
+                          "Best Coffee",
+                          style: TextStyle(fontSize: 16, color: Colors.white60),
+                        )
                       ],
                     ),
                   ),
                 ),
-                 Padding(
+                Padding(
                   padding: const EdgeInsets.symmetric(vertical: 1),
                   child: Row(
-                    mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("\$30", style: Style.style18.copyWith(color: Colors.white),),
+                      Text(
+                        "\$30",
+                        style: Style.style18.copyWith(color: Colors.white),
+                      ),
                       Container(
                         padding: const EdgeInsets.all(5),
-                        decoration:  BoxDecoration(
+                        decoration: BoxDecoration(
                           color: const Color(0xffE57734),
                           borderRadius: BorderRadius.circular(20),
                         ),
-                        child: const Icon(CupertinoIcons.add,size: 20,color: Colors.white,),
+                        child: const Icon(
+                          CupertinoIcons.add,
+                          size: 20,
+                          color: Colors.white,
+                        ),
                       )
                     ],
                   ),

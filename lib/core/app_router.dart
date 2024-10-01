@@ -18,10 +18,6 @@ abstract class AppRouter{
            path: homeScreen,
            builder: (context,state) => const HomeScreen()
        ),
-       GoRoute(
-           path: singleItemScreen,
-           builder: (context,state) => const SingleItemScreen()
-       )
     ]
   );
 }
