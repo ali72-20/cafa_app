@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../core/Style.dart';
 import '../../../../core/colors.dart';
 
@@ -17,7 +15,7 @@ class BottomRowButtons extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(
                 horizontal: 20, vertical: 20),
-            margin: EdgeInsets.all(10),
+            margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(18),
               color: searchViewColor,
