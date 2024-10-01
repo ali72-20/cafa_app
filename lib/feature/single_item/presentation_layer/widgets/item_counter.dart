@@ -11,6 +11,7 @@ class ItemCounter extends StatefulWidget {
 }
 
 class _ItemCounterState extends State<ItemCounter> {
+  int itemCounter = 0;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -19,27 +20,41 @@ class _ItemCounterState extends State<ItemCounter> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
-            padding: EdgeInsets.all(15),
+            padding: const EdgeInsets.all(15),
             width: 120,
             decoration: BoxDecoration(
                 border: Border.all(color: Colors.white.withOpacity(.2)),
                 borderRadius: BorderRadius.circular(20)),
-            child: const Row(
+            child:  Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(
-                  CupertinoIcons.minus,
-                  size: 18,
-                  color: Colors.white,
+                 InkWell(
+                  onTap: (){
+                    setState(() {
+                      if(itemCounter > 0) itemCounter--;
+                    });
+                  },
+                  child:  Icon(
+                    CupertinoIcons.minus,
+                    size: 18,
+                    color: Colors.white.withOpacity(itemCounter == 0? .5 : 1),
+                  ),
                 ),
                 Text(
-                  '2',
+                  '$itemCounter',
                   style: Style.style16,
                 ),
-                Icon(
-                  CupertinoIcons.add,
-                  size: 18,
-                  color: Colors.white,
+                InkWell(
+                  onTap: (){
+                    setState(() {
+                      itemCounter++;
+                    });
+                  },
+                  child: const Icon(
+                    CupertinoIcons.add,
+                    size: 18,
+                    color: Colors.white,
+                  ),
                 )
               ],
             ),
