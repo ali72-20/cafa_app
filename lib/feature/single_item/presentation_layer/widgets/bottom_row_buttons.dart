@@ -2,12 +2,18 @@ import 'package:flutter/material.dart';
 import '../../../../core/Style.dart';
 import '../../../../core/colors.dart';
 
-class BottomRowButtons extends StatelessWidget {
+class BottomRowButtons extends StatefulWidget {
   const BottomRowButtons({super.key});
 
   @override
+  State<BottomRowButtons> createState() => _BottomRowButtonsState();
+}
+
+class _BottomRowButtonsState extends State<BottomRowButtons> {
+  Color favouriteIconColor = Colors.white;
+  @override
   Widget build(BuildContext context) {
-    return     SizedBox(
+    return  SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -47,10 +53,17 @@ class BottomRowButtons extends StatelessWidget {
                 )
               ],
             ),
-            child: const Icon(
-              Icons.favorite,
-              size: 18,
-              color: Colors.white,
+            child: InkWell(
+              onTap: (){
+                setState(() {
+                  favouriteIconColor = favouriteIconColor == Colors.white ? Colors.red : Colors.white;
+                });
+              },
+              child:  Icon(
+                Icons.favorite,
+                size: 22,
+                color: favouriteIconColor,
+              ),
             ),
           ),
         ],
