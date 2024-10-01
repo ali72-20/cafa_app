@@ -1,1 +1,1 @@
-const String splashImage = "lib/core/utilites/Images/splash.json";
+const String splashImage = "lib/core/utilites/Images/5o6zbO3Ksm.json";
