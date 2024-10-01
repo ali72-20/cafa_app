@@ -5,4 +5,17 @@ abstract class Style{
      fontSize: 50,
      color: Colors.white
    );
+   static final style18 = TextStyle(
+       color: Colors.white.withOpacity(0.8),
+       fontSize: 18,
+       fontWeight: FontWeight.w500,
+       letterSpacing: 1
+   );
+
+   static const style22 = TextStyle(
+      color: Colors.white,
+      fontSize: 22,
+      fontWeight: FontWeight.bold,
+      letterSpacing: 1
+   );
 }
