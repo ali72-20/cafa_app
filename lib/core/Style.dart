@@ -11,6 +11,12 @@ abstract class Style{
        fontWeight: FontWeight.w500,
        letterSpacing: 1
    );
+   static final style14 = TextStyle(
+       color: Colors.white.withOpacity(0.8),
+       fontSize: 10,
+       fontWeight: FontWeight.w500,
+       letterSpacing: 1
+   );
 
    static const style22 = TextStyle(
       color: Colors.white,

@@ -19,7 +19,7 @@ class CoffeeItems extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       crossAxisCount: 2,
       shrinkWrap: true,
-      childAspectRatio: (150 / 195),
+      childAspectRatio: (150 / 210),
       children: [
         for (int i = 0; i < img.length; ++i)
           Container(
@@ -66,7 +66,7 @@ class CoffeeItems extends StatelessWidget {
                   ),
                 ),
                  Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 5),
+                  padding: const EdgeInsets.symmetric(vertical: 1),
                   child: Row(
                     mainAxisAlignment:MainAxisAlignment.spaceBetween,
                     children: [

@@ -39,7 +39,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody>
                 ),
               ),
               const SizedBox(
-                height: 30,
+                height: 16,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -47,7 +47,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody>
                   width: MediaQuery.of(context).size.width,
                   child: const Text(
                     "It's a Great Day for Coffee",
-                    style: Style.style30,
+                    style: Style.style22,
                   ),
                 ),
               ),

@@ -25,7 +25,7 @@ class WelcomeScreenBody extends StatelessWidget {
           const AppLogo(),
           Lottie.asset(splashImage),
           const AppSlogan(),
-          const SizedBox(height: 80,),
+          const SizedBox(height: 70,),
           const GetStartedButton(),
         ],
       ),
