@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../core/Style.dart';
 
 class ItemCounter extends StatefulWidget {
@@ -37,7 +36,7 @@ class _ItemCounterState extends State<ItemCounter> {
                   child:  Icon(
                     CupertinoIcons.minus,
                     size: 18,
-                    color: Colors.white.withOpacity(itemCounter == 0? .5 : 1),
+                    color: Colors.white.withOpacity(itemCounter == 0? .3 : 1),
                   ),
                 ),
                 Text(
@@ -59,8 +58,8 @@ class _ItemCounterState extends State<ItemCounter> {
               ],
             ),
           ),
-          const Text(
-            "\$30",
+           Text(
+            "\$ ${itemCounter * 30}",
             style: Style.style22,
           ),
         ],
