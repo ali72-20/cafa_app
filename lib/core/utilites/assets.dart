@@ -1,0 +1,1 @@
+const String splashImage = "lib/core/utilites/Images/Animation - 1727781523425.gif";
