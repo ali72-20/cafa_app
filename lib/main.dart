@@ -15,7 +15,6 @@ class Main extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: scaffoldBackGround
       ),
-      home:
     );
   }
 }
