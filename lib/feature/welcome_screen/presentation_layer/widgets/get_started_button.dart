@@ -52,11 +52,11 @@ class _GetStartedButtonState extends State<GetStartedButton>
               context: context,
               builder: (context) {
                 return AlertDialog(
-                  backgroundColor: Colors.white,
+                  backgroundColor: searchViewColor,
                   actions: [Lottie.asset(loading)],
                 );
               });
-          Future.delayed(const Duration(seconds: 2), () {
+          Future.delayed(const Duration(seconds: 3), () {
             GoRouter.of(context).push(AppRouter.homeScreen);
           });
         },
