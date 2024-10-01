@@ -1,3 +1,4 @@
+import 'package:cafa_app/core/app_router.dart';
 import 'package:cafa_app/core/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,8 @@ class Main extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: scaffoldBackGround
