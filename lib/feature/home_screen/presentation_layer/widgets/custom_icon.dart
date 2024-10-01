@@ -10,7 +10,7 @@ class CustomIcon extends StatelessWidget {
       onTap: () {},
       child: Icon(
         icon,
-        color: Colors.white,
+        color: Colors.white.withOpacity(.5),
         size: 35,
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:cafa_app/core/app_router.dart';
+import 'package:cafa_app/core/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -51,7 +52,7 @@ class _GetStartedButtonState extends State<GetStartedButton> with SingleTickerPr
           child: Container(
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 50),
             decoration:  BoxDecoration(
-                color: Colors.brown,
+                color: searchViewColor,
                 borderRadius: BorderRadius.circular(10)
             ),
             child: const Text("Get Started", style: Style.style22,),

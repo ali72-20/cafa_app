@@ -1,3 +1,4 @@
+import 'package:cafa_app/core/colors.dart';
 import 'package:flutter/material.dart';
 
 class SearchView extends StatelessWidget {
@@ -11,7 +12,7 @@ class SearchView extends StatelessWidget {
       height: 60,
       alignment: Alignment.center,
       decoration:  BoxDecoration(
-          color: Colors.brown,
+          color: searchViewColor,
           borderRadius: BorderRadius.circular(10)
       ),
       child: TextFormField(
