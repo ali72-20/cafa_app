@@ -1,3 +1,4 @@
+import 'package:cafa_app/feature/welcome_screen/presentation_layer/widgets/welcome_screen_body.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -6,8 +7,8 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SafeArea(
-      child: Scaffold(
-        body: Text("Start"),
+      child: Material(
+        child: WelcomeScreenBody(),
       ),
     );
   }
