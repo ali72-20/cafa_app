@@ -18,4 +18,10 @@ abstract class Style{
       fontWeight: FontWeight.bold,
       letterSpacing: 1
    );
+   static const style30 = TextStyle(
+       color: Colors.white,
+       fontSize: 30,
+       fontWeight: FontWeight.bold,
+       letterSpacing: 1
+   );
 }

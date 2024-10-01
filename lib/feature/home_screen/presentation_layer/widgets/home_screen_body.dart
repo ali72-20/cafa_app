@@ -1,4 +1,6 @@
+import 'package:cafa_app/core/Style.dart';
 import 'package:cafa_app/feature/home_screen/presentation_layer/widgets/custom_icon.dart';
+import 'package:cafa_app/feature/home_screen/presentation_layer/widgets/search_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -42,14 +44,27 @@ class _HomeScreenBodyState extends State<HomeScreenBody>
           padding: const EdgeInsets.only(top: 15),
           child: ListView(
             padding: const EdgeInsets.symmetric(horizontal: 15),
-            children: const [
-              Row(
+            children: [
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                 CustomIcon(icon: Icons.sort_rounded,),
-                 CustomIcon(icon: Icons.notifications),
+                  CustomIcon(
+                    icon: Icons.sort_rounded,
+                  ),
+                  CustomIcon(icon: Icons.notifications),
                 ],
               ),
+              const SizedBox(
+                height: 30,
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                child: const Text(
+                  "It's a Great Day for Coffee",
+                  style: Style.style30,
+                ),
+              ),
+             const SearchView(),
             ],
           ),
         ),
