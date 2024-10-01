@@ -42,12 +42,12 @@ class _HomeTabBarState extends State<HomeTabBar> with SingleTickerProviderStateM
           controller: _tabController,
           isScrollable: true,
           unselectedLabelColor: Colors.white.withOpacity(.5),
-          labelColor: tabColor,
+          labelColor: selectedColor,
           tabAlignment: TabAlignment.start,
           indicator: const UnderlineTabIndicator(
               borderSide: BorderSide(
                   width: 3,
-                  color: tabColor
+                  color: selectedColor
               )
           ),
           labelStyle: Style.style18.copyWith(fontWeight: FontWeight.w500),

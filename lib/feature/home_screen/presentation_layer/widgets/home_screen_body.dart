@@ -1,5 +1,6 @@
 import 'package:cafa_app/core/Style.dart';
 import 'package:cafa_app/feature/home_screen/presentation_layer/widgets/custom_icon.dart';
+import 'package:cafa_app/feature/home_screen/presentation_layer/widgets/home_bottom_navigation_bar.dart';
 import 'package:cafa_app/feature/home_screen/presentation_layer/widgets/home_tab_bar.dart';
 import 'package:cafa_app/feature/home_screen/presentation_layer/widgets/search_view.dart';
 import 'package:flutter/material.dart';
@@ -56,6 +57,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody>
           ),
         ),
       ),
+      bottomNavigationBar: const HomeBottomNavigationBar()
     );
   }
 }
