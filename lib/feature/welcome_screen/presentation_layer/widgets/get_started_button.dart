@@ -1,7 +1,9 @@
 import 'package:cafa_app/core/app_router.dart';
 import 'package:cafa_app/core/colors.dart';
+import 'package:cafa_app/core/utilites/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:lottie/lottie.dart';
 
 import '../../../../core/Style.dart';
 
@@ -12,20 +14,20 @@ class GetStartedButton extends StatefulWidget {
   State<GetStartedButton> createState() => _GetStartedButtonState();
 }
 
-class _GetStartedButtonState extends State<GetStartedButton> with SingleTickerProviderStateMixin {
+class _GetStartedButtonState extends State<GetStartedButton>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<Offset> _offsetAnimation;
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    _controller = AnimationController(
-      duration: const Duration(seconds: 2),
-      vsync: this
-    );
+    _controller =
+        AnimationController(duration: const Duration(seconds: 2), vsync: this);
 
     _offsetAnimation = Tween<Offset>(
-      begin: const Offset(0.0,1.0),
+      begin: const Offset(0.0, 1.0),
       end: Offset.zero,
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.bounceIn));
 
@@ -37,25 +39,37 @@ class _GetStartedButtonState extends State<GetStartedButton> with SingleTickerPr
     // TODO: implement dispose
     _controller.dispose();
     super.dispose();
-
   }
+
   @override
   Widget build(BuildContext context) {
     return SlideTransition(
       position: _offsetAnimation,
       child: InkWell(
         splashColor: Colors.black,
-        onTap: (){
-          GoRouter.of(context).push(AppRouter.homeScreen);
+        onTap: () {
+          showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                  backgroundColor: Colors.white,
+                  actions: [Lottie.asset(loading)],
+                );
+              });
+          Future.delayed(const Duration(seconds: 2), () {
+            GoRouter.of(context).push(AppRouter.homeScreen);
+          });
         },
         child: Ink(
           child: Container(
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 50),
-            decoration:  BoxDecoration(
+            decoration: BoxDecoration(
                 color: searchViewColor,
-                borderRadius: BorderRadius.circular(10)
+                borderRadius: BorderRadius.circular(10)),
+            child: const Text(
+              "Get Started",
+              style: Style.style22,
             ),
-            child: const Text("Get Started", style: Style.style22,),
           ),
         ),
       ),
