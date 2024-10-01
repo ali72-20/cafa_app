@@ -1,11 +1,11 @@
 import 'package:cafa_app/core/app_router.dart';
 import 'package:cafa_app/core/colors.dart';
-import 'package:cafa_app/core/utilites/assets.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:lottie/lottie.dart';
-
+import 'package:shimmer/shimmer.dart';
 import '../../../../core/Style.dart';
+import 'custom_loading_indicator.dart';
 
 class GetStartedButton extends StatefulWidget {
   const GetStartedButton({super.key});
@@ -51,24 +51,35 @@ class _GetStartedButtonState extends State<GetStartedButton>
           showDialog(
               context: context,
               builder: (context) {
-                return AlertDialog(
-                  backgroundColor: searchViewColor,
-                  actions: [Lottie.asset(loading)],
-                );
+                return const CustomLoadingIndicator();
               });
           Future.delayed(const Duration(seconds: 3), () {
             GoRouter.of(context).push(AppRouter.homeScreen);
           });
         },
         child: Ink(
-          child: Container(
-            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 50),
-            decoration: BoxDecoration(
-                color: searchViewColor,
-                borderRadius: BorderRadius.circular(10)),
-            child: const Text(
-              "Get Started",
-              style: Style.style22,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 50),
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 50),
+              decoration: BoxDecoration(
+                  color: searchViewColor,
+                  borderRadius: BorderRadius.circular(10)),
+              child: Shimmer.fromColors(
+                baseColor: Colors.white,
+                highlightColor: Colors.white24,
+                child: const Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Get Started",
+                      style: Style.style22,
+                    ),
+                    Icon(Icons.arrow_right,size: 50,)
+                  ],
+                ),
+              ),
             ),
           ),
         ),
