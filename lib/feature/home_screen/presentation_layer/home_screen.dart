@@ -1,3 +1,4 @@
+import 'package:cafa_app/feature/home_screen/presentation_layer/widgets/home_screen_body.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: Scaffold(
-        body: Text("Home screen"),
+        body: HomeScreenBody(),
       ),
     );
   }
