@@ -17,7 +17,7 @@ class WelcomeScreenBody extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.only(top: 100, bottom: 40),
       decoration: const BoxDecoration(
-        color: splashBackGround,
+        color: kPrimaryColor,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

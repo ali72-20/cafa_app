@@ -15,7 +15,7 @@ class Main extends StatelessWidget {
       routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: scaffoldBackGround
+        scaffoldBackgroundColor: kPrimaryColor
       ),
     );
   }
