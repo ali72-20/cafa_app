@@ -1,5 +1,4 @@
 import 'package:cafa_app/core/app_router.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -27,7 +26,7 @@ class _GetStartedButtonState extends State<GetStartedButton> with SingleTickerPr
     _offsetAnimation = Tween<Offset>(
       begin: const Offset(0.0,1.0),
       end: Offset.zero,
-    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.bounceIn));
 
     _controller.forward();
   }

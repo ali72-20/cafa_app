@@ -1,6 +1,7 @@
 import 'package:cafa_app/core/Style.dart';
 import 'package:cafa_app/core/colors.dart';
 import 'package:cafa_app/core/utilites/assets.dart';
+import 'package:cafa_app/feature/welcome_screen/presentation_layer/widgets/app_logo.dart';
 import 'package:cafa_app/feature/welcome_screen/presentation_layer/widgets/get_started_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -19,10 +20,7 @@ class WelcomeScreenBody extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-            "Coffee Shop",
-            style: Style.style50,
-          ),
+          const AppLogo(),
           Lottie.asset(splashImage),
           Text(
             "Feeling Low? Take a Sip of Coffee",
