@@ -1,3 +1,4 @@
+import 'package:cafa_app/core/Style.dart';
 import 'package:cafa_app/core/colors.dart';
 import 'package:cafa_app/core/utilites/assets.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +14,12 @@ class WelcomeScreenBody extends StatelessWidget {
       decoration:  const BoxDecoration(
         color: splashBackGround,
       ),
-      child: Lottie.asset(splashImage),
+      child: Column(
+        children: [
+          Text("Coffee Shop", style: Style.style50,),
+          Lottie.asset(splashImage),
+        ],
+      ),
     );
   }
 }
