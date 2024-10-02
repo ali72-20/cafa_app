@@ -61,7 +61,7 @@ class _GetStartedButtonState extends State<GetStartedButton>
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 50),
             child: Container(
-              padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 50),
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
               decoration: BoxDecoration(
                   color: searchViewColor,
                   borderRadius: BorderRadius.circular(10)),
@@ -76,7 +76,7 @@ class _GetStartedButtonState extends State<GetStartedButton>
                       "Get Started",
                       style: Style.style22,
                     ),
-                    Icon(Icons.arrow_right,size: 50,)
+                    Icon(Icons.arrow_right,size: 40,)
                   ],
                 ),
               ),
