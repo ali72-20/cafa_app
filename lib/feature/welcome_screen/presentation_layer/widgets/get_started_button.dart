@@ -54,7 +54,7 @@ class _GetStartedButtonState extends State<GetStartedButton>
                 return const CustomLoadingIndicator();
               });
           Future.delayed(const Duration(seconds: 3), () {
-            GoRouter.of(context).push(AppRouter.homeScreen);
+            GoRouter.of(context).pushReplacement(AppRouter.homeScreen);
           });
         },
         child: Ink(
