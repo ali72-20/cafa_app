@@ -1,3 +1,4 @@
+import 'package:animated_flip_counter/animated_flip_counter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -39,9 +40,9 @@ class _CounterMoneyRowState extends State<CounterMoneyRow> {
                   color: Colors.white.withOpacity(itemCounter == 0? .3 : 1),
                 ),
               ),
-              Text(
-                '$itemCounter',
-                style: Style.style16,
+              AnimatedFlipCounter(
+                value: itemCounter,
+                textStyle: Style.style16
               ),
               InkWell(
                 onTap: (){
@@ -58,9 +59,10 @@ class _CounterMoneyRowState extends State<CounterMoneyRow> {
             ],
           ),
         ),
-        Text(
-          "\$ ${itemCounter * 30}",
-          style: Style.style22,
+        AnimatedFlipCounter(
+          duration: const Duration(microseconds: 300),
+          value:  itemCounter * 30,
+          textStyle: Style.style18
         ),
       ],
     );
