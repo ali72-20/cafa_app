@@ -6,13 +6,10 @@ class CustomIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  InkWell(
-      onTap: () {},
-      child: Icon(
+    return Icon(
         icon,
         color: Colors.white.withOpacity(.5),
         size: 35,
-      ),
     );
   }
 }
