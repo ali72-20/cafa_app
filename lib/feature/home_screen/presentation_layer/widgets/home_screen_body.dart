@@ -34,7 +34,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody>
                     CustomIcon(
                       icon: Icons.sort_rounded,
                     ),
-                    CustomIcon(icon: Icons.notifications),
+                    CustomIcon(icon: Icons.shopping_cart),
                   ],
                 ),
               ),
